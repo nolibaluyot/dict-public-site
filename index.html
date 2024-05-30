@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://unpkg.com/leaflet@1.9.4/ 'unsafe-inline';"> -->
+    <title>| DICT</title>
+    
+    <!-- All CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/DICT SUB-BRAND LOGO.png" type="img/png">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+  <style>
+      .nav-background {
+          background-image: url('img/nav.png');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+      }
+
+        /* Workaround for some mobile browsers */
+        min-height: 100%;
+      }
+
+    </style>
+
+    <style>
+
+       .footer-background {
+    background-image: url('img/footer.png');  /* Replace 'footer-background.jpg' with your actual image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80px;
+}
+
+
+    </style>
+    
+   <nav class="navbar navbar-expand-lg navbar-light bg-light nav-background fixed-top">
+    <div class="container">
+      <img src="" alt="" height="75" class="d-inline-block align-text-top">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-5 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#services">DICT Services</a>
+          </li> 
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Events</a>
+          </li>
+         <!--  <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li> -->
+          <!-- New Login and Register buttons -->
+          <li class="nav-item">
+            <a class="btn btn-outline-light" href="#login" style="margin-left: 10px;">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline-light" href="#register" style="margin-left: 10px;">Register</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+         
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/provoffice.jpg" class="d-block" style="height: 800px; width: 100%;" alt="">
+      <div class="carousel-caption">
+        <h5>THE DICT PROVINCIAL OFFICE</h5>
+        <p>Department of Information and Communications Technology
+        Provincial Field Office Province of Zambales.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/dict.png" class="d-block" style="height: 800px; width: 98%;" alt="">
+      <div class="carousel-caption">
+        <h5>THE DICT LOGO</h5>
+        <p>The DICT Logo exudes power, inclusiveness, novelty, freshness and innovation, and ubiquity brought by technology.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/bg2.png" class="d-block" style="height: 800px; width: 100%;" alt="">
+      <div class="carousel-caption">
+        <h5>DICT | Bagong Pilipinas</h5>
+        <p>symbolize the government's goal of using technology to promote peace and development in the Philippines.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+      <!-- about section starts -->
+     <div class="container" id="about">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="img/DICT SUB-BRAND LOGO.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Department of Information and Communications Technology</h1>
+            <p class="lead">
+                Department of Information and Communications Technology (DICT): It is an executive department of the Philippine government responsible for planning, developing, and promoting the country's information and communications technology (ICT) agenda. Established in 2016 and headed by the Secretary, currently Ivan John Uy. This department is the primary policy, planning, coordinating, implementing, and administrative entity of the Executive Branch of the government that plans, develops, and promotes the national ICT development agenda. (RA 10844)
+            </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="https://dict.gov.ph/about-us/our-mandate/" class="btn btn-primary btn-lg px-4 me-md-2" role="button">Read</a>
+                <a href="https://dict.gov.ph/about-us/vision-and-mission/" class="btn btn-dark btn-lg px-4 me-md-2" role="button">More</a>
+            </div>
+        </div>
+    </div>
+   <!--  <div class="section-header text-center pt-5 pb-3">
+        <h2>Meet the Developer</h2>
+        <p>Training Management System <br>Department of Information and Communications Technology</p>
+    </div> -->
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <img src="img/ralph.jpg" alt="" class="img-fluid rounded-circle">
+                    <h3 class="card-title py-2">Ralph Custodio</h3>
+                    <p class="card-text">Polytechnic College of Botolan BSIT | Web Developer.</p>
+                    <p class="socials">
+                        <i class="bi bi-twitter text-dark mx-1"></i>
+                        <i class="bi bi-facebook text-dark mx-1"></i>
+                        <i class="bi bi-linkedin text-dark mx-1"></i>
+                        <i class="bi bi-instagram text-dark mx-1"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Additional developer cards here -->
+        <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="img/h4g.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">Noli Baluyot</h3>
+                        <p class="card-text">Polytechnic College of Botolan BSIT | Web Developer.</p>
+                        <p class="socials">
+                            <i class="bi bi-twitter text-dark mx-1"></i>
+                        <i class="bi bi-facebook text-dark mx-1"></i>
+                        <i class="bi bi-linkedin text-dark mx-1"></i>
+                        <i class="bi bi-instagram text-dark mx-1"></i>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="img/nomer.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">Nomer Magsanop</h3>
+                        <p class="card-text">Polytechnic College of Botolan BSIT | Web Developer.</p>
+                        <p class="socials">
+                            <i class="bi bi-twitter text-dark mx-1"></i>
+                        <i class="bi bi-facebook text-dark mx-1"></i>
+                        <i class="bi bi-linkedin text-dark mx-1"></i>
+                        <i class="bi bi-instagram text-dark mx-1"></i>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+
+               <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="img/noli.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">DICT Zambales</h3>
+                        <p class="card-text">Polytechnic College of Botolan BSIT | Web Developer.</p>
+                        <p class="socials">
+                        <i class="bi bi-twitter text-dark mx-1"></i>
+                        <i class="bi bi-facebook text-dark mx-1"></i>
+                        <i class="bi bi-linkedin text-dark mx-1"></i>
+                        <i class="bi bi-instagram text-dark mx-1"></i>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+           </div>
+      </div>
+
+      <!-- about section Ends -->
+      <!-- services section Starts -->
+      <section class="services section-padding" id="services">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="section-header text-center pb-5">
+                          <h2>Services</h2>
+                          <p>Department of Information and Communications Technology <br>Regional Office</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-white text-center bg-dark pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-key"></i>
+                            <h3 class="card-title">Philippine National Public Key Infrastructure (PNPKI)</h3>
+                            <p class="lead">Public Key Infrastructure (PKI) allows users of public networks like the Internet to exchange private data securely. PKI is essentially a set of hardware, software, policies, personnel and procedures needed to create, manage, distribute, use, store and revoke digital certificates. The PKI is one of the core services being offered by the Department of Information and Communications Technology (DICT) that will foster trust in the government by ensuring secure and reliable online transactions.</p>
+                            <a href="https://dict.gov.ph/pnpki/" class="btn bg-primary text-dark" role="button">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                  <div class="col-12 col-md-12 col-lg-4">
+                      <div class="card text-white text-center bg-dark pb-2">
+                          <div class="card-body">
+                            <i class="bi bi-shield-lock-fill"></i>
+                              <h3 class="card-title">Government Web Hosting Service</h3>
+                              <p class="lead">There are things we need to publish a website online. Firstly is the domain name. For the GWHS, domain name ends with the top-level domain “.gov” (government) and the country code domain extension “.ph” (Philippines).<br>  <br>An example here is dict.gov.ph. Secondly, is the web space for your website, which is technically the website host. The website host provider also maintains the technologies and services needed for your website to be remotely accessible over the Internet. </p>
+                              <a href="https://dict.gov.ph/services/gwhs/" class="btn bg-primary text-dark" role="button">Read More</a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-4">
+                      <div class="card text-white text-center bg-dark pb-2">
+                          <div class="card-body">
+                            <i class="bi bi-intersect"></i>
+                              <h3 class="card-title">ICT Trainings</h3>
+                              <p class="lead">Capacity building is one of the pillars of sustainability and the Department is steadfast in developing ICT competencies and promoting ICT awareness and appreciation among different sectors of society.<br>Through its ICT Literacy Competency and Development Bureau(ILCDB), the Department implements an Assess-Build-Certify (ABC) Framework in order to appropriately and systematically determine competency level and training needs of an individual in different ICT areas <br>to develop and enhance <br>ICT skills in various sectors.</p>
+                              <a href="https://dict.gov.ph/ict-trainings/" class="btn bg-primary text-dark" role="button">Read More</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <!-- services section Ends -->
+
+      <!-- portfolio strats -->
+      <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Events</h2>
+                        <p>Department of Information and Communications Technology <br>2024 Trainings.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="img/training.jpg" class="img-fluid" alt="">
+                          </div>
+                            <h3 class="card-title">ICT Training</h3>
+                            <p class="lead">The ILCDB will be opening 25,000 slot applications for our FREE ICT TRAINING courses! This is open to all government employees and students from S/LUCs who wish to develop ICT skills in the domain of digital transformative technologies and other specializations. Open for all Faculty, and Students who want to upgrade their and skills in ICT</p>
+                            <button type="button" class="btn btn-outline-primary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="img/exam.jpg" class="img-fluid" alt="">
+                          </div>
+                            <h3 class="card-title">ICT PROFICIENCY EXAM SCHEDULE 2024</h3>
+                            <p class="lead">This exam is equivalent to a CSC Professional eligibility. DICT issues a Certificate of Proficiency, which serves as the basis of CSC in granting the special ICT (EDP) Specialist Eligibility. There are two ways of acquiring the proficiency certificate, either passing a technical course or an examination, both administered by DICT</p>
+                            <button type="button" class="btn btn-outline-primary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-light text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                          <div class="img-area mb-4">
+                              <img src="img/ilcdb.jpg" class="img-fluid" alt="">
+                          </div>
+                            <h3 class="card-title">CPIT Special Bootcamp: Digital Forensics and Incident Response</h3>
+                            <p class="lead">Pre-qualifying Exam for the conduct of DFIR<br>A total of 21 government employees will be invited to the onsite training. 100% attendance is required to receive completion certification to be co-signed by DICT ILCDB and USAID BEACON</p>
+                            <button type="button" class="btn btn-outline-primary">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section> 
+
+
+      <!-- portfolio ends -->
+      <!-- team starts -->
+     <!--  <section class="team section-padding" id="team">
+          <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Meet the Developer</h2>
+                        <p>Training Management System <br>Department of Information and Communications Technology</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="img/ralph.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">Ralph Custodio</h3>
+                        <p class="card-text">Polytechnic College of Botolan BSIT | Web Developer.</p>
+                        
+
+                        <p class="socials">
+                            <i class="bi bi-twitter text-dark mx-1"></i>
+                        <i class="bi bi-facebook text-dark mx-1"></i>
+                        <i class="bi bi-linkedin text-dark mx-1"></i>
+                        <i class="bi bi-instagram text-dark mx-1"></i>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="img/h4g.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">Noli Baluyot</h3>
+                        <p class="card-text">Polytechnic College of Botolan BSIT | Web Developer.</p>
+                        <p class="socials">
+                            <i class="bi bi-twitter text-dark mx-1"></i>
+                        <i class="bi bi-facebook text-dark mx-1"></i>
+                        <i class="bi bi-linkedin text-dark mx-1"></i>
+                        <i class="bi bi-instagram text-dark mx-1"></i>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="img/nomer.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">Nomer Magsanop</h3>
+                        <p class="card-text">Polytechnic College of Botolan BSIT | Web Developer.</p>
+                        <p class="socials">
+                            <i class="bi bi-twitter text-dark mx-1"></i>
+                        <i class="bi bi-facebook text-dark mx-1"></i>
+                        <i class="bi bi-linkedin text-dark mx-1"></i>
+                        <i class="bi bi-instagram text-dark mx-1"></i>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <img src="img/noli.jpg" alt="" class="img-fluid rounded-circle">
+                        <h3 class="card-title py-2">DICT Zambales</h3>
+                        <p class="card-text">Polytechnic College of Botolan BSIT | Web Developer.</p>
+                        <p class="socials">
+                        <i class="bi bi-twitter text-dark mx-1"></i>
+                        <i class="bi bi-facebook text-dark mx-1"></i>
+                        <i class="bi bi-linkedin text-dark mx-1"></i>
+                        <i class="bi bi-instagram text-dark mx-1"></i>
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </section> -->
+
+         <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center pb-5">
+                    <h2>DICT Zambales Provincial Office</h2>
+                    <p>Official <br>Location</p>
+                </div>
+            </div>
+        </div>
+
+       <div class="map-container" style="text-align: center; padding: 20px;">
+          <div id="map" style="height: 400px; width: calc(100% - 60px); border: 100px; display: inline-block; box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);"></div>
+      </div>
+
+      <!-- team ends -->
+      <!-- Contact starts -->
+      <!-- <section id="contact" class="contact section-padding">
+        <div class="container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Contact Us</h2>
+                        <p>Department of Information and Communications Technology <br>Regional Office 3</p>
+                    </div>
+                </div>
+            </div>
+			<div class="row m-0">
+				<div class="col-md-12 p-0 pt-4 pb-4">
+					<form action="#" class="bg-light p-4 m-auto">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control" placeholder="Full Name" required="" type="text">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<input class="form-control" placeholder="Email" required="" type="email">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="mb-3">
+									<textarea class="form-control" placeholder="Message" required="" rows="3"></textarea>
+								</div>
+							</div><button class="btn btn-primary btn-lg btn-block mt-3" type="button">Send Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+      </section> -->
+      <!-- contact ends -->
+      <!-- footer starts -->
+      <footer class="bg-dark p-2 text-center footer-background">
+          <div class="container">
+              <p class="text-white">Department of Information and Communications Technology</p>
+          </div>
+      </footer>
+
+      <!-- footer ends -->
+
+
+  
+    <!-- All Js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+  <script>
+  // Initialize the map
+  var mymap = L.map('map').setView([15.3148, 119.9986], 13); // Use actual coordinates
+
+  // Add a tile layer (you can use your preferred tile provider)
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(mymap);
+
+  // Add a marker for DICT Zambales Provincial office
+  L.marker([15.3148, 119.9986]).addTo(mymap)
+    .bindPopup('DICT Zambales Provincial Office').openPopup(); // Customize popup content as needed
+</script>
+
+<!-- <script>
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+</script>
+
+<script>
+    console.log('%cWarning!', 'color: red; font-size: 24px;');
+    console.log('Unauthorized access to the source code may have legal consequences.');
+</script>
+ -->
+
+</body>
+</html>
+
+
+
+
+<!--for getting the form download the code from download button-->
